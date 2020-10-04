@@ -1,0 +1,67 @@
+<div class="owner">
+  <div class="wrapper">
+    <div class="owner-form">
+      <div class="header">
+        <h2>Add Farmer</h2>
+      </div>
+      <div class="row">
+        <form [formGroup]="farmer">
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name"  placeholder="Name">
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>NIC</mat-label>
+              <input matInput formControlName="nic" placeholder="NIC">
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>telephone</mat-label>
+              <input matInput formControlName="telephone" placeholder="telephone">
+            </mat-form-field>
+          </div>
+          <div class="address-group" formGroupName="address">
+            <div class="col">
+              <mat-form-field appearance="outline">
+                <mat-label>Address Line</mat-label>
+                <input matInput formControlName="addressLine" placeholder="Address Line">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field appearance="outline">
+                <mat-label>Province</mat-label>
+                <input matInput formControlName="province" placeholder="province">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field appearance="outline">
+                <mat-label>District</mat-label>
+                <input matInput formControlName="district" placeholder="district">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <input matInput formControlName="city" placeholder="city">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field appearance="outline">
+                <mat-label>Village</mat-label>
+                <input matInput formControlName="village" placeholder="village">
+              </mat-form-field>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="row btn-row">
+        <button mat-flat-button color="primary" class="btn save-btn" (click)="save()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

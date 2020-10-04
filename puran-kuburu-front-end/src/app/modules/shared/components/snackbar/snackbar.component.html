@@ -1,0 +1,9 @@
+<div class="snack-bar-wrapper">
+  <mat-icon class="error" *ngIf="data?.type == matSnackBarTye.ERROR">error_outline</mat-icon>
+  <mat-icon class="warning" *ngIf="data?.type == matSnackBarTye.WARNING">warning</mat-icon>
+  <mat-icon class="success" *ngIf="data?.type == matSnackBarTye.SUCCESS">check_circle</mat-icon>
+  <span class="message">{{data?.message}}</span>
+  <button class="close-button" mat-icon-button aria-label="close-icon" (click)="close()">
+    <mat-icon>cancel</mat-icon>
+  </button>
+</div>

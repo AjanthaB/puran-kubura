@@ -1,0 +1,18 @@
+.paddy-field-wrapper {
+  padding: 15px;
+  .search-panel {}
+  .btn-row {
+    margin-bottom: 10px;
+    .add-new-paddy-field-btn {
+      margin-left: auto;
+    }
+  }
+  .paddy-field-list {
+    padding: 10px;
+    background: #424242;
+    border-radius: 10px;
+    .data-table {
+      width: 100%;
+    }
+  }
+}

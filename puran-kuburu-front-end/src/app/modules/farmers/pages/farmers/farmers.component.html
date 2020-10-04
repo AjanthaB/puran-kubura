@@ -1,0 +1,46 @@
+<div class="owner">
+  <div class="flex-row">
+    <div class="row btn-row">
+      <button mat-flat-button color="primary" class="btn save-btn" (click)="goToAddFrmer()">Add New Farmer</button>
+    </div>
+  </div>
+  <div class="owner-view">
+    <!-- table goes here -->
+    <div class="owner-form">
+      <div class="header">
+        <h2>Current Farmers</h2>
+      </div>
+      <div class="row">
+        <mat-table [dataSource]="farmers" class="mat-elevation-z8">
+          <!-- Position Column -->
+         <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef>Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element?.name}} </mat-cell>
+        </ng-container>
+         <ng-container matColumnDef="nic">
+          <mat-header-cell *matHeaderCellDef>NIC </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element?.nic}} </mat-cell>
+        </ng-container>
+         <ng-container matColumnDef="telephone">
+          <mat-header-cell *matHeaderCellDef>Telephone </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element?.telephone}} </mat-cell>
+        </ng-container>
+         <ng-container matColumnDef="city">
+          <mat-header-cell *matHeaderCellDef>City </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element?.address?.city}} </mat-cell>
+        </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      <div class="row">
+        <mat-paginator (page)="changePage($event)"
+                       [length]="farmers.length"
+                       [pageSize]="paginationConfig.pageSize"
+                       [pageSizeOptions]="paginationConfig.pageSizeOptions">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

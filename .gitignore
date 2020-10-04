@@ -1,0 +1,4 @@
+.idea/
+
+*./puran-kuburu-backend/node_modules/*
+*./puran-kuburu-font-end/node_modules/*
